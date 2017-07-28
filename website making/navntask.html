@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form id="form">
+	<input type="text" id="fname" placeholder="enter first name"><br><br>
+	<input type="text" id="lname" placeholder="enter last name"><br><br>
+	<input type="numbers" id="phone" placeholder="enter 10-digit number"><br><br>
+	<input type="email" id="email" placeholder="enter Email-id"><br><br>
+	<input type="radio" name="gender" id="male">male
+	<input type="radio" name="gender" id="female">female<br><br>
+	<input type="checkbox" name="languages" id="telugu">telugu
+	<input type="checkbox" name="languages" id="hindi">hindi
+	<input type="checkbox" name="languages" id="english">english
+	
+</form>
+<input type="submit" id="submit">
+<script type="text/javascript">
+
+var form=document.getElementById('form');
+var button=document.getElementById('submit');
+button.onclick=function(){ 
+var x=document.getElementById('fname').value;
+var y=document.getElementById('lname').value;
+var z=document.getElementById('email').value;
+var a=document.getElementById('phone').value;
+
+var rates = document.getElementsByName('gender');
+var rate_value;
+for(var i = 0; i < rates.length; i++){
+    if(rates[i].checked){
+        rate_value = rates[i].value;
+    }
+}
+
+var rates1 = document.getElementsByName('languages');
+var rate_value1;
+for(var i = 0; i < rates1.length; i++){
+    if(rates1[i].checked){
+        rate_value1 = rates1[i].value;
+    }
+}
+
+
+if(x == ' ' || y ==' ' || z ==' ' || a ==' '){
+alert("please fill form");
+}
+// if((b == ''||c == '')&&(d == ''||e == ''||f == '')){
+// 	alert("please choose any one option");
+// }
+else {
+
+	document.write("first name="+x+"<br>"+"last name="+y+"<br>"+"email="+z+"<br>"+
+		"phone number="+a+"<br>"+"gender="+rate_value+"<br>"+"languages="+rate_value1);
+
+}
+}
+</script>
+</body>
+</html>

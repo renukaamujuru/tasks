@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<script type="text/javascript">
+		function movieTickets(fname){
+			return function(a){
+					 var obj = {
+						fname: fname,
+						a: a
+					}
+					return obj;
+			}
+		}
+
+		 var movie1 = new movieTickets("dillikar")('tharun');
+        console.log(movie1);
+
+
+
+        // function person(name){
+        // 	var name = name;
+
+        // }
+        // var per = new person('tharun');
+        // console.log(per.name)
+
+        //  console.log(movie1);
+         
+
+         function person(name){
+         	this.name = name;
+
+         }
+         var per = new person('ajdfhjafh');
+
+         console.log(per.name)
+
+
+        
+
+</script>
+</body>
+</html>

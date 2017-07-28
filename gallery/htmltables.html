@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table#table {
+			width:200px;
+			margin:50px;
+			float: left;
+			text-align: left;
+			border-spacing: 10px;
+
+		}
+		table#one th{
+			background-color: pink;
+		}
+	/*	table#one tr:nth-child(odd){
+			background-color: yellow;
+		}*/
+	</style>
+</head>
+<body>
+	
+ 	<div id="table">
+ 		<!-- border 4px black groove change border outside -->
+ 		<table  id="one" border=" 4px black groove  " cellspacing="10px" cellpadding="10px" >
+      <colgroup>
+            <col span="2" style="background-color:red">
+            <col style="background-color:yellow">
+      </colgroup>
+
+ 			 <thead><tr> 
+            <th>name</th>
+            <th>age</th>
+            <th>gender</th>
+        </tr></thead>
+       <tr>
+            <td>renu</td>
+            <td>21</td>
+            <td>female</td>
+      </tr>
+      <tfoot><tr>
+            <td>sire</td>
+            <td>22</td>
+            <td>female</td>
+      </tr></tfoot>
+      <tr>
+            <td>moni</td>
+            <td>21</td>
+            <td>female</td>
+      </tr>
+      
+     <tbody><tr>
+            <td>mahi</td>
+            <td>21</td>
+            <td>female</td>
+      </tr></tbody> 
+     
+
+ 			<!-- <tr>
+ 				<td>chicken</td>
+ 				<td>lizards</td>
+ 			</tr> -->
+ 			<!-- <tr>
+ 				<th>name:</th>
+ 				<td>renuka</td>
+
+ 			</tr>
+ 			<tr>
+ 				<th rowspan="2">age</th>
+ 				<td>10</td>
+
+ 			</tr>
+ 			<tr>
+ 				<td>20</td>
+ 			</tr> -->
+ 		</table>
+ 	</div>
+ 	
+</body>
+</html>

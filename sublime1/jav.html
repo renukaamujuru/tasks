@@ -1,0 +1,72 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	//storage by class 
+	/*var a=10;
+	var b=a;
+	console.log(b);
+	var b=null;
+	console.log(alert(b));
+//storage by reference
+var renu={
+	name:"sweety"*/
+/*}
+var sire=renu;
+sire.name="penguin";
+	console.log(renu.name);
+	// function as expression
+	function msg(){
+console.log("hello");
+console.log(41+1-10*1/2);
+
+	}
+msg();
+	//mathematical operators
+	execution context
+if(true)
+{
+	console.log("name is hemlata");
+}
+	console.log(a);
+	c();
+	var a=70;
+	var b=a;
+	function c(){
+		console.log(a);
+
+	}
+	c();
+	function d(){
+		var b=100;
+		a=b;
+		c();
+		console.log(a);
+	}
+d();
+console.log(b);*/
+
+function car(model,year){
+	this.model=model;
+	this.year=year;
+
+}
+
+function person(fnam,lnam,model,year)
+{
+	this.firnam=fnam;
+	this.lasnam=lnam;
+	car.call(this,model,year);
+}
+person.prototype.fullDetails=function(){
+     console.log(this.firnam +this.lasnam);
+}
+var emp=new person("yasu","renu","nissan");
+emp.fullDetails=function(){
+	console.log(this.firnam + this.lasnam + this.model);
+}
+</script>
+
+	</body>
+</html>

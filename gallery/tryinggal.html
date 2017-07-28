@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.divcls img {
+		position: relative;
+		visibility: visible;
+		cursor: pointer;
+		margin: auto;
+	}
+	.spancls img{
+		position: absolute;
+		visibility:hidden; 
+
+	}
+	.divcls .opacityy{
+		opacity: 0.3;
+		width:100%;
+		height: 100%;
+	}
+	.divcls .show{
+		visibility: visible;
+		top:20px;
+		left:200px;
+	}
+	.divcls1 img {
+		position: relative;
+		visibility: visible;
+		cursor: pointer;
+		margin: auto;
+	}
+	.spancls1 img{
+		position: absolute;
+		visibility:hidden; 
+
+	}
+	.divcls1 .opacityy{
+		opacity: 0.3;
+		width:100%;
+		height: 100%;
+	}
+	.divcls1 .show{
+		visibility: visible;
+		top:20px;
+		left:200px;
+	}
+	
+	</style>
+</head>
+<body>
+
+	<div class="divcls" onclick="myfunc1()">
+		<img src="v.jpg" width="300px" height="300px" id="divid">
+	
+	<span class="spancls">
+		<img src="v.jpg" width="700px" height="700px" id="spanid">
+	</span>
+	</div>
+	<div class="divcls1" onclick="myfunc()">
+		<img src="auroraborealis.jpg" width="300px" height="300px" id="divid1">
+	
+	<span class="spancls1">
+		<img src="auroraborealis.jpg" width="700px" height="700px" id="spanid1">
+	</span>
+
+	</div>
+<script type="text/javascript">
+
+function myfunc(){
+	{
+	var a=document.getElementById('divid1');
+	a.classList.toggle('opacityy');
+	var b=document.getElementById('spanid1');
+	b.classList.toggle('show');
+}function myfunc1()
+ {
+var a=document.getElementById('divid');
+	a.classList.toggle('opacityy');
+	var b=document.getElementById('spanid');
+	b.classList.toggle('show');
+
+}
+
+</script>
+</body>
+</html>

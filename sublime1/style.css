@@ -1,0 +1,102 @@
+h1{
+	background-color: red;
+}
+h1{
+	margin-top: 5px;
+	border-style: solid;
+	width: 350px;
+	padding: 10px;
+}
+ul li{
+	
+	background-color: lightgrey;
+	list-style-type: none;
+	margin: 10px;
+	padding: 5px;
+}
+
+
+ul {
+	margin: 10px;
+	
+}
+a{
+	text-decoration: none;
+}
+
+
+ul{
+	float: right;
+}
+
+#first{
+	float: left;
+	background-color: white;
+	border-style: solid;
+}
+#first a{
+	color: black;
+	
+}
+#second {
+	float: left;
+	
+	background-color: yellow;
+	border-style: solid;
+}
+
+
+
+
+#third {
+	float: left;
+	background-color: pink;
+	border-style: solid;
+}
+	
+
+#fourth {
+	float: left;
+	background-color: red;
+border-style: solid;
+}
+
+p{ 
+	
+	margin: 10px;
+	border-style: solid;
+	width: 400px;
+	padding: 5px;
+}
+#one {
+float: left;
+	background-color: pink;
+	border-style: solid;
+	height: 110px;
+	width: 110px;
+	margin-top: 10px;
+}
+#two {
+float: left;
+	background-color: pink;
+	border-style: solid;
+	height: 110px;
+	width: 110px;
+	margin-top: 10px;
+}
+#three {
+float: left;
+	background-color: pink;
+	border-style: solid;
+	height: 110px;
+	width: 110px;
+	margin-top: 10px;
+}
+#four {
+float: left;
+	background-color: pink;
+	border-style: solid;
+	height: 110px;
+	width: 110px;
+	margin-top: 10px;
+}

@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box1{
+			width: 60%;
+			height: 60%;
+			background-color: gray;
+			cursor: pointer;
+		}
+		#box2{
+			width: 30%;
+			height: 30%;
+			border: 2px solid;
+			background-color: yellow;
+			cursor: pointer;
+		}
+		p{
+			font-size: 40px;
+		}
+	</style>
+</head>
+<*body>
+	<!-- <div id="first" onclick="displayNone()"> -->
+ <div id="box1"><P id="maindiv"></P>
+<div id="box2"><P id="subdiv"></P></div>
+</div>
+ <!-- </div> -->
+ <script type="text/javascript">
+ 	var div1=document.getElementById('box1');
+ 	var div2=document.getElementById('box2');
+ 	div1.addEventListener("mouseover",outer);
+    div2.addEventListener("mouseover",inside);
+    
+
+  function outer(){
+  	var x=document.getElementById('maindiv').innerHTML="hello welcome to outer div";
+  var y=document.getElementById('maindiv').style.display="block";
+  	
+  	console.log("x");
+  }
+  	div1.ondblclick=function(){
+  		var y=document.getElementById('maindiv').style.display="none";
+  	}
+stopPropagation(inside);
+ 
+ function inside(){
+  	var y=document.getElementById('subdiv').innerHTML="hello welcome to inside div";
+  	var z=document.getElementById('subdiv').style.display="block";
+  }
+  div2.onmouseout=function(){
+  		var z=document.getElementById('subdiv').style.display="none";
+  	}
+  		
+  
+ </script>
+</body>
+</html>

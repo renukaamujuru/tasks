@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+.divclass{
+	position: relative;
+	width: 50px;
+	height: 50px;
+}
+.div img{
+	width: 20px;
+	height: 20px;
+	margin: auto;
+}
+.spanclass{
+	position:absolute;
+	width:10px;
+	height:10px;
+}
+.spanclass img{
+	width: 20px;
+	height: 20px;
+	margin: auto;
+}
+.show{
+	visibility: visible;
+	width:20px;
+	height:20px;
+	margin: auto;
+}
+.opacity{
+	opacity: 0.4;
+}
+.spanclass img{
+	visibility: hidden;
+	
+	right:30px;
+}
+
+	</style>
+</head>
+<body>
+<div class="divclass" onclick="run()">
+<img src="v.jpg" id="divid">
+<span class="spanclass" id="show">
+<img src="v.jpg">
+
+</span>
+</div>
+
+<script type="text/javascript">
+function run(){
+var store=document.getElementById('divid');
+var showimg=document.getElementById('show');
+
+	store.classList.toggle('opacity');
+     store.classList.toggle('showimg');
+}
+
+</script>
+</body>
+</html>

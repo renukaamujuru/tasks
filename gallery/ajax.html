@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ 	<div id="first">
+ 		<h1>hello </h1>
+ 		<button >click here to get content</button>
+ 	</div>
+ 	
+ 	<script type="text/javascript">
+ 	 var button=document.getElementsByTagName('button');
+ 	 button.onclick=function(){
+ 	 	var request=new XMLHttpRequest();
+ 	 	request.onreadystatechange=function(){
+ 	 		if(this.readystate == 4 && this.state == 200){
+ 	 			document.getElementById("first").innerHTML=this.responseText;
+ 	 		}
+ 	 	};
+ 	 	request.open("get","details.js",true);
+ 	 	request.send();
+ 	</script>
+</body>
+</html>

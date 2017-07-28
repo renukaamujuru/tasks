@@ -1,0 +1,131 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+			/*function tryy(){
+				
+				var userName="renuka";
+				this.getDisplay=function(){
+					return userName +" " +this.password;
+				}
+				this.password="renuuuuu";
+			}
+			var execute = new tryy();
+				execute.like= "chocloates";
+				console.log(execute.like);
+				console.log(execute.userName);
+				console.log(execute.getDisplay());
+				console.log(execute.password);
+			var execute1 = new tryy();
+				console.log(execute1.password);*/
+						
+			/*var array=" dhaiii iii d ";
+			
+			console.log(array.match(/i/g).length);
+			console.log(array);
+			console.log(array.trim());
+			var todayDate= new Date();
+			console.log(todayDate.getFullYear()); */
+			/*var idiots=["renu",1,"siri",2,true];
+			console.log(idiots[0,2]);
+*/
+        /*  var profiles=[
+          {
+			name:"renu",
+          	age:21,
+          	gender:"f",
+          	occupation:"software",
+          	location:"hyderabad",
+          	maritalStatus:"single", 
+          },
+          {
+			name:"sire",
+          	age:23,
+          	gender:"f",
+          	occupation:"house wife",
+          	location:"africa",
+          	maritalStatus:"third marriage(thrown out)",
+          }];
+          var matchedProfiles=[];
+          var match=function(gender,minAge,maxAge,location)
+          {
+          for(var i=0;i<profiles.length;i++){
+          	//gender f
+          	// age 23-25
+          	//location africa
+          	if((profiles[i].gender==gender) && 
+          		(profiles[i].age>=minAge&&profiles[i].age<=maxAge)&&
+          		  (profiles[i].location==location))
+          	{
+          		matchedProfiles.push(profiles[i]);
+
+          	}
+          }
+          	return matchedProfiles;
+ 
+          };
+      
+          // var result=match("f",21,23,"africa");
+          var result1=match("f",21,23,"africa");
+         
+          console.log(result1);*/
+/*
+          var icecream = {
+               name:"pista",
+               taste:"soo good",
+               }
+          var shop = new Object(icecream);
+               console.log(icecream.name +" "+icecream.taste);*/
+               
+               /*function vehicle(){
+                    this.name="renu";
+                    this.year="";
+               }
+               var audi=new vehicle();
+
+               var hyundai=new vehicle();
+               audi.name="audiiii";
+
+               vehicle.prototype.price="200000";
+               console.log(audi.price);
+               console.log(audi.name);
+               console.log(hyundai.name);
+ */  
+               var student=["renu","moni","mahi"];
+               var rollNo=[501,502,503];
+               Array.prototype.Odd=function(){
+                  // cronsole.log(this);             
+                         var output=[];
+                         
+                         for(var i=0 ; i < this.length;i++)
+                         {
+                              if(i%2 ==1)
+                              {
+                                   output.push(this[i]);
+                              }  
+                         }
+                               return output;
+               }
+                Array.prototype.even=function(){
+                  // console.log(this);
+                         var output1=[];
+                         for(var i=0 ; i < this.length;i++)
+                         {
+                             
+                              if(i%2==0)
+                              {
+                                   output1.push(this[i]);
+                              }
+                         }
+                              return output1;
+               }
+
+               console.log(student.Odd());
+               console.log(student.even());
+               console.log(rollNo.Odd());
+		</script>
+	
+</body>
+</html>

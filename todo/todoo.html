@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todoapp</title>
+	<style type="text/css">
+		ul li input[type=text]{
+			display: none;
+		}
+		ul li.press input[type=text]{
+			display: block;
+		}
+		ul li.press span{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="text" name="task"><button>Add Task</button>
+		<div>
+
+			<h3>incompleted task</h3>
+			<ul id="incompletetask">
+				<!-- <li>
+					<input type="checkbox"><span>movie</span><input type="text" name=""> <button>Edit/Save</button><button>Delete</button>
+				</li> -->
+
+			</ul>
+		</div>
+		<div>
+			<h3>CompletedTask</h3>
+			<ul id="completedtask">
+				
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// when use click on add button and 
+			// create li, input type checkbox, input type text, span ,editButton, delete button
+			// append the created li element to the incomplete task
+		// when user checks checkbox 
+			//move the whole task to completed section
+		// when user unchecks  checkbox 
+			//move the whole task to incomplete section
+		// when user clicks on editButton 
+			//copy span element innertext into input type text and hide the span element and show thee input type text 
+		// when the user clicks on save button 
+			//copy the input type text element value into span element 	 	
+			
+		// when the user click on delete Button 
+			//delete the task on the page .
+
+		var addBtn = document.getElementsByTagName("button")[0];
+		var taskEl = document.getElementsByName("task")[0];
+		var incompleteTask = document.getElementById("incompletetask");
+		var completeTask = document.getElementById("completedtask");
+		console.log(taskEl);
+		addBtn.onclick=function addTask(){
+			console.log("addTask");
+			var wholeTaskList = document.createElement("li");
+			var content = document.createElement("span");
+			var changeTextField = document.createElement("input");
+			var checkBox = document.createElement("input");
+			var editButton = document.createElement("button");
+			var deleteButton = document.createElement("button");
+
+			changeTextField.setAttribute("type","text");
+			checkBox.setAttribute("type","checkbox");
+			editButton.innerText = "Edit/Save";
+			deleteButton.innerText = "Delete";
+
+			// binding 
+			editButton.onclick=editTask;
+			deleteButton.onclick = deleteTask;
+			content.innerText = taskEl.value;
+			checkBox.onchange = moveTask;
+			wholeTaskList.appendChild(checkBox);
+			wholeTaskList.appendChild(content);
+			wholeTaskList.appendChild(changeTextField);
+			wholeTaskList.appendChild(editButton);
+			wholeTaskList.appendChild(deleteButton);
+
+			incompleteTask.appendChild(wholeTaskList);
+		}
+		var editTask=function(){
+			var text=this.parentNode;
+			var textBox=text.querySelector('input[type=text]');
+			
+			var spanvar=text.querySelector('span');
+			if(text.getAttribute('class') === "press"){
+				spanvar.innerText=textBox.value;
+				text.setAttribute('class','');
+				//text.getAttribute("class","press")
+
+			}else if(text.getAttribute('class') !== "press"){
+				textBox.value=spanvar.innerText;
+				text.setAttribute('class','press');
+			}
+
+
+
+		}
+		function deleteTask(){
+			console.log("delete task");
+			
+			var wholeTaskLi = this.parentNode;
+			var ulEl = wholeTaskLi.parentNode;
+			ulEl.removeChild(wholeTaskLi);
+
+		}
+		function moveTask(e){
+			console.log(e);
+			var liEl = this.parentNode;
+			if (e.target.checked) {
+				completeTask.appendChild(liEl);
+				
+			}else{
+				incompleteTask.appendChild(liEl);
+			}
+			
+		}
+		// addBtn.onclick = addTask;
+	</script>
+</body>	
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form name="form1">
+		First Name <input type="text" id="fname" name="fname"><br><br>
+		Last Name <input type="text" id="lname"><br><br>
+		<select id="year"></select>
+		<select id="month"></select>
+		<select id="date"></select>
+	</form>
+	<button id="btn" onclick="register()">Register</button>
+	<script type="text/javascript">
+		function register(){
+		 var store=document.form1.fname.value;
+		 var store1=document.form1.lname.value;
+		 if(store==''){
+		 	alert("you have not entered first Name value");
+		 } 
+		 if(store!='' && store1=='')
+		 {
+		 	store2.innerText = store.value;
+		 	alert("you have not entered last Name value");
+		
+		 }
+		 else
+		 {
+		alert("your first name is:  " +document.form1.fname.value+ " "+ "your last name is:  "+document.form1.lname.value);
+	     }
+	 }
+	 function buildYearDropDown(){
+	 	var startYear=2030;
+	 	var endYear=2030-60;
+	 	var year=document.getElementById('year');
+	 	for(var i=startYear;i>endYear;i--){
+	 		var tag=document.createElement('option');
+	 		var option=buildOption(i,i);
+	 		year.appendChild(option);
+	 		
+	 	}
+
+	 }
+	 buildYearDropDown();
+	 function buildOption(value,value1){
+	 	var tag=document.createElement('option');
+	 	tag.value=value;
+	 	tag.value1=value1;
+	 	return tag;
+	 }
+	 function buildOption1(value2,value3){
+	 	var tag1=document.createElement('option');
+	 	tag1.value2=value2;
+	 	tag1.value3=value3;
+	 }
+	 function buildMonth(){
+	 	var startMonth=12;
+	 	var endMonth=12-12;
+	 	var month=document.getElementById('month');
+	 	// var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31]; 
+	 		// if((year%4==0)&&(year%100!=0)||(year%400 ==0)){
+	
+	 	for(var k=startMonth;k>endMonth;k--){
+	 		var option2=document.createElement('option');
+	 		var option2=buildOption(k,k);
+	 		month.appendChild(option2);
+	 		buildDate(k);
+	 	}
+	 
+	 }
+	 buildMonth();
+	 function buildDate(startMonth){
+	 	var startDate;
+	 	var endDate;
+	 	var month=document.getElementById('month');
+	 	var date=document.getElementById('date');
+
+	 	if(month==startMonth[0]||month==startMonth[2]||month==startMonth[4]||month==startMonth[6]||month==startMonth[7]||month==startMonth[9]||month==startMonth[11]){
+	 		startDate=31;
+	 		endDate=31-31;
+	 	for(var j=startDate;j>endDate;j--){
+	 		var option1=document.createElement('option');
+	 		 var option1=buildOption1(j,j);
+	 		date.appendChild(option1);
+	 	}
+	   }
+	   else if(month==startMonth[3]&&month==startMonth[5]&&month==startMonth[8]&&month==startMonth[10]){
+	    	 startDate=30;
+	   	     endDate=30-30;
+	   	for(var j=startDate;j>endDate;j--){
+	 	     var option1=document.createElement('option');
+	 		 var option1=buildOption1(j,j);
+	 		date.appendChild(option1);
+	 	}
+	   }
+	   else if(month==startMonth[1]){
+	   	     startDate=28;
+	   	     endDate=28-28;
+	   	for(var j=startDate;j>endDate;j--){
+	 		 var option1=document.createElement('option');
+	 		 var option1=buildOption1(j,j);
+	 		 date.appendChild(option1);
+	 	}
+	   }
+	 }
+	
+	</script>
+</body>
+</html>

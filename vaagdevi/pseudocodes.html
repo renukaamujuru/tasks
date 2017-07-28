@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	/*meta content="width=device-width" name="viewport";*/
+li:nth-child(odd){
+background-color: lightPink;
+}
+li:nth-child(even){
+	background-color: orange;
+}
+p.head:first-line{
+	color:#00ff00;
+	/*font-variant: small-caps;*/
+	font-size:25px;
+}
+.main{
+	width: 74.45058%;
+	height: 73%;
+}
+.fisrtpart,.secondpart{
+	width:50%;
+	height:300px;
+	border-style: groove;
+	background-color: steelBlue;
+	margin:10px;
+	padding: 5px;
+	font-size: 25px;
+}
+
+.fisrtpart{
+position:relative;
+top:0px;
+left:5px;
+}
+.secondpart{
+	position: absolute;
+	top:130px;
+	left:500px;
+}
+@media screen and (max-width: 700px){
+	.fisrtpart,.secondpart{
+		width: 100%;
+	}
+}
+	</style>
+</head>
+<body>
+<div class="main">
+<div><ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+</ul>
+</div>
+<p class="head">html is used to describe and define the content of the web page.</p>
+<div class="fisrtpart">
+<h1>FRONT END</h1>
+<p id="front">front end involves many programming languages like html,css,javascript mainlyfront end involves many programming languages like html,css,javascript mainlyfront end involves many programming languages like html,css,javascript mainly</p>
+</div>
+<div class="secondpart">
+<h1>BACKEND</h1>
+<p id="back">backend involves many programming languages like mango DB,node js,react jsbackend involves many programming languages like mango DB,node js,react jsbackend involves many programming languages like mango DB,node js,react js</p>
+</div>
+</div>
+      </body>
+</html>

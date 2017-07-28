@@ -1,0 +1,68 @@
+h1{
+
+background-color: black;
+}
+h1
+{
+	width:300px;
+	
+	border:2px solid black;
+	
+	padding:5px;
+	
+	margin:0px;
+}
+ul{
+	
+margin:10px;
+
+}
+
+ul li {
+	
+	
+background-color: lightgrey;
+	
+list-style-type: none;
+	
+margin:10px;
+
+padding:5px;
+
+}
+
+a{
+	
+text-decoration: none;
+
+	
+color:white;
+
+}
+
+ul{
+
+	float:right;
+
+}
+
+#first{
+
+	float:left;
+	
+background-color: yellow;
+
+
+}
+
+#first a{
+	color:black;
+}
+#second{
+	float:left;
+	background-color: crimson;
+}
+#third,#fourth{
+	float:left;
+}
+

@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+ 		.main img{
+ 			width: 200px;
+ 			height: 300px;
+ 			cursor: pointer;
+ 		}
+ 		#img2{
+ 			display: none;
+ 		}
+ 		/*.main1 img{
+ 			width: 200px;    
+ 			height: 300px;
+ 			cursor: pointer;
+ 		}
+ 		#img22{
+ 			display: none;
+ 		}*/
+	</style>
+</head>
+<body>
+	<div class="main"> <img src="v.jpg" id="img1" onclick="display()" >
+		<span class="sub"><img src="v.jpg" id="img2"></span>
+	</div>
+	<!-- <div class="main1"> <img src="mou.jpg" id="img11" onclick="display()" >
+		<span class="sub1"><img src="mou.jpg" id="img22"></span>
+	</div> -->
+	<script type="text/javascript">
+		var getdivimg=document.getElementById("img1");
+		var getspanimg=document.getElementById("img2");
+		/*var getdiv1img=document.getElementById("img11");
+		var getspan1img=document.getElementById("img22");
+		*/
+		 function display(){
+			/*getspanimg.parentNode.style.height = '100px';
+			getspanimg.parentNode.style.width = '100px';*/
+			/*if( getspanimg == getdivimg){*/
+				getdivimg.style.display="none";
+				getspanimg.style.display="inline";
+				getspanimg.style.width="400px";
+				getspanimg.style.height="500px";
+				getspanimg.style.top="10px";
+			}
+		}
+			/*else if(getspan1img == getdiv1img){
+				getdiv1img.style.display="none";
+				getspan1img.style.display="inline";
+				getspan1img.style.width="400px";
+				getspan1img.style.height="500px";
+				getspan1img.style.top="10px";
+			}
+		}*/
+	
+		
+		window.onclick=function(event)
+		{
+			if(event.target== getspanimg){
+				getspanimg.style.display="none";
+				getdivimg.style.display="inline";
+			}
+			/*if(event.target== getspan1img){
+				getspan1img.style.display="none";
+				getdiv1img.style.display="inline";
+			}*/
+		}
+		/**/
+
+	</script>
+
+</body>
+</html>

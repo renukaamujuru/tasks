@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+	first name:<input type="text" id="fname"><br><br>
+	last  name:<input type="text" id="lname">
+	<select id="year"></select>
+	<select id="month"></select>
+	<select id="date"></select>
+</form>
+<script type="text/javascript">
+	
+	var month=document.getElementById('month');
+	var date=document.getElementById('date');
+	function buildYearDropDown(){
+		var startYear=2030;
+		var endYear=2030-60;
+		var year=document.getElementById('year');
+		for(var i=startYear;i>endYear;i--){
+			var option1=buildOption(i,i);
+			year.appendChild(option1);
+		}
+	}
+	buildYearDropDown();
+	function buildOption(value,textContent){
+		var tag=document.createElement('option');
+		tag.value=value;
+		tag.textContent=textContent;
+		return tag;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="savee()"> clickme</button>
+
+<ul id="ulid">
+	
+</ul>
+
+<script type="text/javascript">
+/*var x=
+	[{
+		name:"renu",
+		profile:true,
+		lastName:"amujuru",
+		rollno:501
+	}];
+	console.log(x.length);
+for(var i=0;i<x.length;i++)
+{
+	console.log("name="+x[0].name);
+
+}*/
+		var btn=document.getElementsByTagName('button');
+		var getul=document.getElementById('ulid');
+   function savee(){
+		var createli=document.createElement('li'); 
+        createli.innerHTML="First Name";    	
+		var inputt=document.createElement('input');
+		inputt.setAttribute("type","text");
+		inputt.placeholder="enter name";
+		createli.appendChild(inputt);
+		getul.appendChild(createli);
+		// console.log(inputt);
+		// inputt.appendChild(inputt);
+		}
+</script>
+</body>
+</html>

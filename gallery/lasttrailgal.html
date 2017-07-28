@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+			div .display {
+				display: none;
+			}
+
+
+	</style>
+</head>
+<body>
+	<div class="one">
+		<div id="two"><img src="vic.jpg" onclick="popup()"></div>
+		<div id="three"><img src="mou.jpg" onclick="popup()"></div>
+
+	</div>
+	<div class="popupimage">
+		<img src="" id="acceptimg">
+	</div>
+	<script type="text/javascript">
+	var getimg=document.getElementById("acceptimg");
+	var img1=document.getElementById("two");
+	var img1=document.getElementById("three");
+		/*var two=querySelector(".one");
+*/
+		var popupp=function popup(){
+			var twoo=this.parentNode;
+			var queryTwo=twoo.querySelector('.one');
+			var divstore=twoo.querySelector('div');
+			if(twoo.getAttribute('class') === "display"){
+				
+				divstore.innerText=queryTwo.value;
+				twoo.setAttribute('class','');
+			}
+			else if(twoo.getAttribute('class') !== "display"){
+				queryTwo.value=divstore.innerText;
+				twoo.setAttribute('class','display');
+			}
+
+		}
+
+
+	</script>
+</body>
+</html>
